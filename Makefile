@@ -1,21 +1,5 @@
 default: rm1
 
-rm2:
-	mkdir -p build/rm2
-	for rs in `seq 2 32`; \
-	do \
-	  $(CXX) \
-	      $(CXXFLAGS)\
-	      -DRING_SIZE=$$rs \
-	      -DINPUT_DEVICE=/dev/input/event1 \
-	      -Wall \
-	      -shared \
-	      -ldl \
-	      -fPIC \
-	      recept.cpp \
-	      -o build/rm2/librecept_rs$$rs.so; \
-	done
-
 rm1:
 	mkdir -p build/rm1
 	for rs in `seq 2 32`; \

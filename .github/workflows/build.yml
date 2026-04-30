@@ -14,13 +14,13 @@ jobs:
     name: Build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: pull docker image
         run: docker pull ghcr.io/toltec-dev/toolchain:v1.3.1
       - name: Build
         run: docker run -v $(pwd):/build -w /build ghcr.io/toltec-dev/toolchain:v1.3.1 make
       - name: Save rM1
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: rm1
           path: build/rm1

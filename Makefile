@@ -1,4 +1,4 @@
-default: rm2 rm1
+default: rm1
 
 rm2:
 	mkdir -p build/rm2

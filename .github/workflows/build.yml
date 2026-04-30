@@ -24,8 +24,3 @@ jobs:
         with:
           name: rm1
           path: build/rm1
-      - name: Save rM2
-        uses: actions/upload-artifact@v3
-        with:
-          name: rm2
-          path: build/rm2

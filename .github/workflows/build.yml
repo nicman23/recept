@@ -5,10 +5,12 @@ on:
     paths:
       - 'Makefile'
       - 'recept.cpp'
+      - '.github/workflows/build.yml'
   pull_request:
     paths:
       - 'Makefile'
       - 'recept.cpp'
+      - '.github/workflows/build.yml'
 jobs:
   build:
     name: Build
